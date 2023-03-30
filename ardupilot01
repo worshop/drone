@@ -1,0 +1,47 @@
+# 소프트웨어 패키지 업데이트
+sudo apt-get update && sudo apt-get upgrade
+
+#git 저장소 설치    - 저장소(Git repository)란  파일이나 폴더를 저장해 두는 곳
+sudo apt-get install git gitk git-gui
+
+# Configure git to use HTTPS instead of git.
+git config --global url."https://github.com/".insteadOf git@github.com:
+git config --global url."https://".insteadOf git://
+
+# Github 에서   Ardupilot  download &  install (5분 정도 소요)
+cd && git clone https://github.com/ArduPilot/ardupilot.git --recursive
+cd ardupilot/
+
+# Install required packages. (10분 이상 소요, 352 newly installed)
+Tools/environment_install/install-prereqs-ubuntu.sh -y  
+
+* https://github.com/ArduPilot/ardupilot/blob/master/Tools/environment_install/install-prereqs-ubuntu.sh
+# Update profile. (Logout and Login)
+. ~/.profile 
+
+
+
+# Get into the ardupilot project directory.
+cd && cd ardupilot/
+# Update profile.
+. ~/.profile
+
+
+# Copter simulation in Linux Go into the ArduCopter directory.
+cd && cd ardupilot/ArduCopter/
+
+#Start the simulation with wiping the virtual EEPROM option to load correct parameters. (10분정도 소요)
+sim_vehicle.py -w
+
+#---------------------------------------------------------------------------------------------------------------------------
+#만약에 path 관련 에러가 발생한다면
+#----------------------------------------------------------------------------------------------------------------------------
+echo $PATH
+/usr/lib/ccache:/home/dronedev/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/dronedev/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+
+gedit ~/.bashrc 
+export PATH=$HOME/bin:usr/.local/bin:$PATH
+
+source .profile 
+dronedev@ubuntu:~$ echo $PATH
+
