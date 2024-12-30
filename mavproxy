@@ -52,7 +52,7 @@ sudo apt install libfuse2 -y  # 다양한 파일 시스템을 구현하기
  
 
 # QgroundControl 다운로드 
-# https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
+wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage  #wget 명령으로 QGC 다운로드
 
 chmod +x ./QGroundControl.AppImage   # 파일 사용권한 설정  옆같이 해도 실행됨. chmod +x $HOME/Downloads/QGroundControl.AppImage
 
