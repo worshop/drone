@@ -31,11 +31,29 @@ https://github.com/ArduPilot/ardupilot
 
 
 
-# Copter simulation in Linux Go into the ArduCopter directory.
+# Copter 시뮬레이터 
 cd && cd ardupilot/ArduCopter/
-
 #Start the simulation with wiping the virtual EEPROM option to load correct parameters. (10분정도 소요)
-sim_vehicle.py -w
+sim_vehicle.py -w --map --console
+
+
+# Plane 시뮬레이터 
+cd && cd ardupilot/ArduPlane
+#Start the simulation with wiping the virtual EEPROM option to load correct parameters. (10분정도 소요)
+sim_vehicle.py -w --map --console
+
+# Rover 시뮬레이터 
+cd && cd ardupilot/Rover
+#Start the simulation with wiping the virtual EEPROM option to load correct parameters. (10분정도 소요)
+sim_vehicle.py -w --map --console
+
+
+ardupilot site : 
+https://ardupilot.org/
+
+ardupilot github : 
+https://github.com/ArduPilot/ardupilot
+
 
 #---------------------------------------------------------------------------------------------------------------------------
 #만약에 path 관련 에러가 발생한다면
@@ -48,9 +66,6 @@ export PATH=$HOME/bin:usr/.local/bin:$PATH
 
 source .profile 
 dronedev@ubuntu:~$ echo $PATH
-
-ardupilot site : 
-https://ardupilot.org/
-
-ardupilot github : 
-https://github.com/ArduPilot/ardupilot
+#---------------------------------------------------------------------------------------------------------------------------
+#만약에 path 관련 에러가 발생한다면 끝
+#----------------------------------------------------------------------------------------------------------------------------
