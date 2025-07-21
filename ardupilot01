@@ -26,6 +26,10 @@ cd && cd ardupilot/
 # Update profile.
 . ~/.profile
 
+ardupilot github site :
+https://github.com/ArduPilot/ardupilot
+
+
 
 # Copter simulation in Linux Go into the ArduCopter directory.
 cd && cd ardupilot/ArduCopter/
@@ -45,3 +49,8 @@ export PATH=$HOME/bin:usr/.local/bin:$PATH
 source .profile 
 dronedev@ubuntu:~$ echo $PATH
 
+ardupilot site : 
+https://ardupilot.org/
+
+ardupilot github : 
+https://github.com/ArduPilot/ardupilot
