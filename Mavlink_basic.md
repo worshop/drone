@@ -12,3 +12,8 @@ Mavlink  메시지들은 드론, 비행 컨트롤러, 지상 제어 스테이션
 # MAVLink Project Generators/Languages
 MAVLink 조직은 mavgen , mavgenerate 및 rust-mavlink 도구를 제공(지원)합니다.
 
+
+# mavlink1 과 mavlink2 비교
+<img width="1336" height="507" alt="image" src="https://github.com/user-attachments/assets/e92a2911-d9d9-43df-8986-fb45598b8f86" />
+
+공식사이트 https://mavlink.io/en/
