@@ -15,12 +15,16 @@ cd && mkdir -p ardu-sim/logs && cd ardu-sim/logs/
 
 
 
+#교통대학교
+./arducopter -S --model copter --speedup 1 --defaults parameters/copter.parm -I0   --home 36.9675,127.8690,0,0 
+
 # 비행체를 개별적으로 실행.
 ./arducopter -S --model copter --speedup 1 --defaults parameters/copter.parm -I0  --home 36.59641548943259,126.29235470578683,584,353    # multicopter 실행
 ./arduplane -S --model plane --speedup 1 --defaults parameters/plane.parm -I0 --home 36.59641548943259,126.29235470578683,584,353  #plane 실행 
 ./ardurover -S --model rover --speedup 1 --defaults parameters/rover.parm -I0 --home 36.59641548943259,126.29235470578683,584,353    #rover 실행
 
- 
+
+
 mavproxy.py --master tcp:127.0.0.1:5760 --map   --console  #GCS 실행
 
 #옵션
