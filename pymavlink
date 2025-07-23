@@ -14,3 +14,10 @@ screen -S proxy -d -m bash -c "mavproxy.py --master tcp:127.0.0.1:5760 --out udp
 screen -S QGC -d -m bash -c "./QGroundControl-x86_64.AppImage"
 
   
+<<< screen 사용예시 >>
+screen -list #현재 실행중인 screen session 보여줌
+screen -r proxy # proxy consol 창 오픈
+screen -r vehicle #vehicle 콘솔 보임
+screen -S vehicle -X quit # vehicle세션 종료
+screen -S proxy -X quit # proxy 세션 종료
+killall screen # 모든세션 종료
