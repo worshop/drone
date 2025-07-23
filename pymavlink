@@ -1,0 +1,16 @@
+매번 함께 실행되는 consol 창을 hidden으로 함께처리하여 Back으로 sessio처리함.
+$ sudo apt-get install screen # screen 설치
+cd ardu-sim/
+gedit ardu-sim.sh
+Ctrl + s 저장 Ctrl+X 종료
+sudo chmod +x ardu-sim.sh
+./ardu-sim.sh 실행
+
+  
+  
+  #!/bin/bash
+screen -S vehicle -d -m bash -c "./arducopter -S --model copter --speedup 1 --defaults parameters/copter.parm -I0   --home 36.9675,127.8690,0,0  "
+screen -S proxy -d -m bash -c "mavproxy.py --master tcp:127.0.0.1:5760 --out udp:127.0.0.1:14550 --out udp:127.0.0.1:14560"
+screen -S QGC -d -m bash -c "./QGroundControl-x86_64.AppImage"
+
+  
