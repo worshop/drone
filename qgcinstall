@@ -5,10 +5,7 @@ sudo apt install libqt5gui5 -y
 sudo apt install libfuse2 -
 
 
-QGC 다운로드
-https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
-
-
-실행
-chmod +x ./QGroundControl.AppImage
-./QGroundControl.AppImage  (or double click)
+cd ~/Downloads
+wget https://github.com/mavlink/qgroundcontrol/releases/download/v5.0.8/QGroundControl-x86_64.AppImage
+chmod +x QGroundControl-x86_64.AppImage
+./QGroundControl-x86_64.AppImage
